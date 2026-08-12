@@ -1,8 +1,10 @@
-void main() {
-  // 자바 신이 될꺼야 ㅋㅋㅋㅋ
-  IO.println(String.format("Hello and welcome!"));
+import aaa.AA;
 
-  for (int i = 1; i <= 5; i++) {
-    IO.println("i = " + i);
-  }
+void main() {
+    int temp = 10;
+    // option + command + l 자동정렬
+    // 자바 신이 될꺼야 ㅋㅋㅋㅋ
+    AA a = new AA();
+    a.doA();
+    a.doB();
 }
