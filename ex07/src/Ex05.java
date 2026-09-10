@@ -26,7 +26,7 @@ public class Ex05 {
 //        String models[] = new String[5];
 //        int maxSpeeds[] = new int[5];
 
-//        Car arr[] = new Car[5];
+//        cont.Car arr[] = new cont.Car[5];
 
     }
 }
