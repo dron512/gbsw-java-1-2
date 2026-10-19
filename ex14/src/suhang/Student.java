@@ -4,6 +4,12 @@ public class Student {
     private int studentNo;
     private String name;
     private int score;
+    @Override
+    public String toString() {
+        return "학생번호 = " + studentNo +
+                ", 학생이름 = '" + name + '\'' +
+                ", 점수 = " + score + "점";
+    }
 
     public Student(){}
     public Student(int studentNo, String name, int score) {
