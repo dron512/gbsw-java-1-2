@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class DBManager {
     public void createTable() {
@@ -77,6 +78,32 @@ public class DBManager {
             pstmt.executeUpdate();
             System.out.println("sql 구문  실행 성공");
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void select(){
+        try{
+            Connection conn = DriverManager.getConnection(
+                    DBInfo.URL,
+                    DBInfo.USER,
+                    DBInfo.PASSWORD
+            );
+            System.out.println("DB 연결 성공");
+
+            PreparedStatement pstmt = conn.prepareStatement(
+                                            "select * from product"
+                                            );
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){ // 그 다음 행이 있으면....
+                System.out.println(rs.getString("name"));
+                System.out.println(rs.getInt("price"));
+                System.out.println(rs.getInt("sales"));
+            }
+
+            System.out.println("sql 구문  실행 성공");
+        }catch (Exception e){
+            System.out.println("오류 발생");
             e.printStackTrace();
         }
     }

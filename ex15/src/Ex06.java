@@ -34,7 +34,10 @@ public class Ex06 {
                 dbManager.insertRow(name,price,sales);
                 System.out.println("행 입력");
             }
-            else if( menu == 4 ){ System.out.println("행 조회"); }
+            else if( menu == 4 ){
+                dbManager.select();
+                System.out.println("행 조회");
+            }
             else{ System.out.println("종료"); break; }
 
         }
